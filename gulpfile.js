@@ -34,7 +34,8 @@ function browserSync(cb) {
 
   watch("src/scss/*.scss", generateCSS);
   watch("src/js/*.js", generateJS);
-  watch("./public/*.html").on("change", sync.reload);
+  watch("public/css/main.css").on("change", sync.reload);
+  watch("public/*.html").on("change", sync.reload);
   cb();
 }
 
